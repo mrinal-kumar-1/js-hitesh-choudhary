@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Add Edit Remove</title>
+</head>
+<body>
+    <ul class="languages">
+        <li>C++</li>
+    </ul>
+</body>
+
+<script>
+
+    //Adding a new Element
+
+    function add(lang)
+    {
+        const li = document.createElement('li')
+        li.innerText = `${lang}`
+        document.querySelector('.languages').appendChild(li);
+    }
+    add('Python')
+
+    function addOpti(lang){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${lang}`));
+        document.querySelector('.languages').appendChild(li)
+    }
+
+addOpti("JavaScript")
+addOpti("TypeScript")
+addOpti("Ruby")
+addOpti("GoLang")
+addOpti("Swift")
+addOpti("Kotlin")
+
+//Editing the existing element
+
+const secondLi = document.querySelector('li:nth-child(2)')
+secondLi.innerHTML = 'Changed'
+
+//Remove
+const re = document.querySelector(
+    'li:nth-child(8)'
+)
+re.remove()
+console.log(`JavaScript is Amazing...
+
+It is fabulous`)
+
+</script>
+
+</html>
