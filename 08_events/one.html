@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>Learning about Events</div>
+    <ul id="items">
+      <li id="happy">
+        <img
+          src="https://images.pexels.com/photos/103123/pexels-photo-103123.jpeg?auto=compress&cs=tinysrgb&w=300"
+          alt=""
+        />
+      </li>
+      <li id="you"><img src="https://images.pexels.com/photos/2176593/pexels-photo-2176593.jpeg?auto=compress&cs=tinysrgb&w=300" alt=""></li>
+      <li id="are"><img src="https://images.pexels.com/photos/1261731/pexels-photo-1261731.jpeg?auto=compress&cs=tinysrgb&w=200" alt=""></li>
+      <li id="yes">Yes</li>
+      <li id="random">Random</li>
+    </ul>
+  </body>
+
+  <script>
+     let t1 = performance.now()
+    
+    document.getElementById("items").addEventListener("click", function (e) {
+      console.log("items clicked");
+
+     if(e.target.tagName === 'IMG'){
+         
+         let removeThis = e.target.parentNode
+         removeThis.remove()
+     }
+
+
+    });
+
+    // document.getElementById("you").addEventListener("click", function (e) {
+    //   console.log("you has been clicked");
+    //   e.stopPropagation();
+    // });
+
+    let t2 = performance.now()
+    console.log(t2-t1)
+
+  </script>
+</html>
