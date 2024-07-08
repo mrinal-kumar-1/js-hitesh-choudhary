@@ -74,6 +74,31 @@
 
 // consumingPromiseFour()
 
+//fetch call in async function
+// async function jsonApi(){
+//     try{
+//         let response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+//         let res = await response.json()
+//         console.log("Fetch Call", res)
+
+//     }
+//     catch(e){
+//         console.log(e,": When error comes, I run")
+//     }
+// }
+
+// jsonApi()
+
+//performing fetch call through then and catch
+
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+// .then((response) => {
+//     return response.json()
+// }).then((response) => {
+//     console.log("Fetch Call:", response);
+// }).catch((error) => {
+//     console.log("When error comes, I run")
+// })
 
 
 
